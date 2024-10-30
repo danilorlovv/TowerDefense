@@ -75,6 +75,9 @@ namespace SpaceShooter
         private void FixedUpdate()
         {
             UpdateRigidbody();
+
+            if (HitPoints <= 0)
+                OnDeath();
             //UpdateEnergyRegen();
         }
 
