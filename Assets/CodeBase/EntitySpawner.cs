@@ -1,13 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using TowerDefense;
 
 namespace SpaceShooter
 {
 
     public class EntitySpawner : MonoBehaviour
     {
-        [SerializeField] private AIPointPatrol m_Target;
+        [SerializeField] private Path m_Path;
 
         /// <summary>
         /// Ссылки на то что спавнить.
@@ -73,13 +72,13 @@ namespace SpaceShooter
         {
             for(int i = 0; i < m_NumSpawns; i++)
             {
-                var prefabToSpawn = m_EntityPrefabs[UnityEngine.Random.Range(0, m_EntityPrefabs.Length)];
+                var prefabToSpawn = m_EntityPrefabs[Random.Range(0, m_EntityPrefabs.Length)];
                 var e = Instantiate(prefabToSpawn);
 
                 e.transform.position = m_Area.RandomInsideZone;
-                if (e.TryGetComponent<AIController>(out var ai))
+                if (e.TryGetComponent<TDPatrolController>(out var ai))
                 {
-                    ai.SetPatrolBehaviour(m_Target);
+                    ai.SetPath(m_Path);
                 }
             }
         }
