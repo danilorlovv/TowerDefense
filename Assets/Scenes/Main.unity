@@ -302,7 +302,6 @@ GameObject:
   m_Component:
   - component: {fileID: 394272816}
   - component: {fileID: 394272814}
-  - component: {fileID: 394272815}
   - component: {fileID: 394272817}
   m_Layer: 0
   m_Name: EnemyCamp
@@ -324,25 +323,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Radius: 0.5
---- !u!114 &394272815
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 394272813}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f56a2052f614d9f41bef42db1493b198, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Path: {fileID: 1529645181}
-  m_EntityPrefabs:
-  - {fileID: 986687603312880248, guid: 9458b4d5d7a3ea642b50fe017a7cf183, type: 3}
-  m_Area: {fileID: 394272814}
-  m_SpawnMode: 1
-  m_NumSpawns: 3
-  m_RespawnTime: 5
 --- !u!4 &394272816
 Transform:
   m_ObjectHideFlags: 0
@@ -370,16 +350,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 394272813}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f56a2052f614d9f41bef42db1493b198, type: 3}
+  m_Script: {fileID: 11500000, guid: fc08b764dde5a3e49983e245e7759036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Path: {fileID: 598220365}
-  m_EntityPrefabs:
-  - {fileID: 986687603312880248, guid: 9458b4d5d7a3ea642b50fe017a7cf183, type: 3}
   m_Area: {fileID: 394272814}
   m_SpawnMode: 1
   m_NumSpawns: 3
-  m_RespawnTime: 5
+  m_RespawnTime: 3
+  m_EntityPrefab: {fileID: 8949379341482096427, guid: 9458b4d5d7a3ea642b50fe017a7cf183, type: 3}
+  m_EnemyAsset:
+  - {fileID: 11400000, guid: 6fbf1f0daa96fdf4c85020c19d1096fe, type: 2}
+  - {fileID: 11400000, guid: 935001e75c0314d4c99969f1d6b1b5f5, type: 2}
+  - {fileID: 11400000, guid: 47bcf04066d88054ba6c717df50b8f36, type: 2}
+  m_Path: {fileID: 1529645181}
 --- !u!1 &457321901
 GameObject:
   m_ObjectHideFlags: 0
