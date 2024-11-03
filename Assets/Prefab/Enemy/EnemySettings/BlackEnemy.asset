@@ -10,6 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa5f13ea82ca66a47826e51d8ac53d21, type: 3}
-  m_Name: YellowEnemy
+  m_Name: BlackEnemy
   m_EditorClassIdentifier: 
-  m_Color: {r: 1, g: 1, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_SizeScale: 1
+  m_AnimatorController: {fileID: 9100000, guid: 05ae0857ab7f88a4bbdd0485d93e9738, type: 2}
+  m_ColliderRadius: 0.2
+  m_Speed: 1.5
+  m_Health: 30
+  m_Score: 3

@@ -21,12 +21,12 @@ namespace SpaceShooter
         /// <summary>
         /// Стартовое кол-во хитпоинтов.
         /// </summary>
-        [SerializeField] private int m_HitPoints;
+        [SerializeField] protected int m_HitPoints;
         
         /// <summary>
         /// Текущие хит поинты
         /// </summary>
-        private int m_CurrentHitPoints;
+        protected int m_CurrentHitPoints;
         public int HitPoints => m_CurrentHitPoints;
 
         #endregion
@@ -126,7 +126,7 @@ namespace SpaceShooter
         /// <summary>
         /// Кол-во очков за уничтожение.
         /// </summary>
-        [SerializeField] private int m_ScoreValue;
+        [SerializeField] protected int m_ScoreValue;
         public int ScoreValue => m_ScoreValue;
 
         #endregion

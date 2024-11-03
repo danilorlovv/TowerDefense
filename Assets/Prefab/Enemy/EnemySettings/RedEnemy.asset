@@ -13,3 +13,9 @@ MonoBehaviour:
   m_Name: RedEnemy
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_SizeScale: 1
+  m_AnimatorController: {fileID: 9100000, guid: e33bc1bf5d8551840863a278fe2a983e, type: 2}
+  m_ColliderRadius: 0.2
+  m_Speed: 0.5
+  m_Health: 50
+  m_Score: 3

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TowerDefense;
+using UnityEngine;
 
 namespace SpaceShooter
 {
@@ -130,6 +131,13 @@ namespace SpaceShooter
             return;
         }
 
+        public void Use(EnemyAsset asset)
+        {
+            m_HitPoints = asset.m_Health;
+            m_CurrentHitPoints = m_HitPoints;
+            m_MaxLinearVelocity = asset.m_Speed;
+            m_ScoreValue = asset.m_Score;
+        }
         /*
         #region Offensive
 

@@ -13,3 +13,9 @@ MonoBehaviour:
   m_Name: BlueEnemy
   m_EditorClassIdentifier: 
   m_Color: {r: 0, g: 0, b: 1, a: 1}
+  m_SizeScale: 1
+  m_AnimatorController: {fileID: 9100000, guid: 05ae0857ab7f88a4bbdd0485d93e9738, type: 2}
+  m_ColliderRadius: 0.2
+  m_Speed: 1
+  m_Health: 25
+  m_Score: 2
