@@ -19,3 +19,5 @@ MonoBehaviour:
   m_Speed: 1.5
   m_Health: 30
   m_Score: 3
+  m_Damage: 3
+  m_Gold: 3

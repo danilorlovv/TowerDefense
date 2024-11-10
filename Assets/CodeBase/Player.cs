@@ -7,41 +7,43 @@ namespace SpaceShooter
     /// </summary>
     public class Player : MonoSingleton<Player>
     {
-        [SerializeField] private int m_NumLives;
+        [SerializeField] protected int m_NumLives;
         [SerializeField] private SpaceShip m_Ship;
         public SpaceShip ActiveShip => m_Ship;
 
-        //[SerializeField] private SpaceShip m_PlayerShipPrefab;
+        [SerializeField] private SpaceShip m_PlayerShipPrefab;
+
+
 
         //[SerializeField] private CameraController m_CameraController;
         //[SerializeField] private MovementController m_MovementController;
 
-        //private void Start()
-        //{
-        //    m_Ship.EventOnDeath.AddListener(OnShipDeath);
-        //}
+        private void Start()
+        {
+            m_Ship?.EventOnDeath.AddListener(OnShipDeath);
+        }
 
-        //private void OnShipDeath()
-        //{
-        //    m_NumLives--;
+        private void OnShipDeath()
+        {
+            m_NumLives--;
 
-        //    if (m_NumLives > 0)
-        //        Respawn();
-        //    else
-        //        LevelSequenceController.Instance.FinishCurrentLevel(false);
-        //}
+            if (m_NumLives > 0)
+                Respawn();
+            else
+                LevelSequenceController.Instance.FinishCurrentLevel(false);
+        }
 
-        //private void Respawn()
-        //{
-        //    var newPlayerShip = Instantiate(m_PlayerShipPrefab.gameObject);
+        private void Respawn()
+        {
+            var newPlayerShip = Instantiate(m_PlayerShipPrefab.gameObject);
 
-        //    m_Ship = newPlayerShip.GetComponent<SpaceShip>();
+            m_Ship = newPlayerShip.GetComponent<SpaceShip>();
 
-        //    m_CameraController.SetTarget(m_Ship.transform);
-        //    m_MovementController.SetTargetShip(m_Ship);
+            //m_CameraController.SetTarget(m_Ship.transform);
+            //m_MovementController.SetTargetShip(m_Ship);
 
-        //    m_Ship.EventOnDeath.AddListener(OnShipDeath);
-        //}
+            m_Ship.EventOnDeath.AddListener(OnShipDeath);
+        }
 
         #region Score (current level only)
 
@@ -58,6 +60,8 @@ namespace SpaceShooter
         {
             Score += num;
         }
+
+
 
         #endregion
     }

@@ -16,6 +16,7 @@ namespace TowerDefense
         public float m_Speed = 1.0f;
         public int m_Health = 10;
         public int m_Score = 1;
-
+        public int m_Damage = 1;
+        public int m_Gold = 1;
     }
 }

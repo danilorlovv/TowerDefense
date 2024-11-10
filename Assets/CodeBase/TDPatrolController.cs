@@ -1,10 +1,13 @@
 using UnityEngine;
+using UnityEngine.Events;
 using SpaceShooter;
 
 namespace TowerDefense
 {
     public class TDPatrolController : AIController
     {
+        [SerializeField] private UnityEvent OnEndPath;
+
         private Path m_Path;
         private int m_PathIndex;
 
@@ -22,7 +25,10 @@ namespace TowerDefense
             if (m_Path.Length > m_PathIndex)
                 SetPatrolBehaviour(m_Path[m_PathIndex]);
             else
+            {
+                OnEndPath.Invoke();
                 Destroy(gameObject);
+            }
         }
     }
 }

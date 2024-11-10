@@ -8,6 +8,9 @@ namespace TowerDefense
     [RequireComponent(typeof(TDPatrolController))]
     public class Enemy : MonoBehaviour
     {
+        [SerializeField] private int m_Damage = 1;
+        [SerializeField] private int m_Gold = 1;
+
         public void Use(EnemyAsset asset)
         {
             GetComponentInChildren<SpriteRenderer>().color = asset.m_Color;
@@ -16,6 +19,19 @@ namespace TowerDefense
             GetComponentInChildren<CircleCollider2D>().radius = asset.m_ColliderRadius;
 
             GetComponent<SpaceShip>().Use(asset);
+
+            m_Damage = asset.m_Damage;
+            m_Gold = asset.m_Gold;
+        }
+
+        public void DamagePlayer()
+        {
+            (Player.Instance as TDPlayer).TakeDamage(m_Damage);
+        }
+
+        public void GoldReward()
+        {
+            (Player.Instance as TDPlayer).ChangeGold(m_Gold);
         }
 
 #if UNITY_EDITOR
