@@ -7,10 +7,10 @@ namespace TowerDefense
     {
         private Text m_Text;
 
-        private void Awake()
+        private void Start()
         {
             m_Text = GetComponent<Text>();
-            TDPlayer.OnGoldUpdate += UpdateText;
+            TDPlayer.GoldUpdateSubscribe(UpdateText);
         }
 
         private void UpdateText(int gold)

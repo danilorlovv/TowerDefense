@@ -2,10 +2,12 @@ using UnityEngine;
 
 namespace TowerDefense
 {
-    [System.Serializable]
-    public class TowerAsset : MonoBehaviour
+    [CreateAssetMenu]
+    public class TowerAsset : ScriptableObject
     {
-        public int Cost = 25;
         public Sprite TowerIcon;
+        public Sprite TowerSprite;
+
+        public int Cost = 25;
     }
 }

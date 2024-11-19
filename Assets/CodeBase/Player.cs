@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using TowerDefense;
+using UnityEngine;
 
 namespace SpaceShooter
 {
@@ -60,9 +62,6 @@ namespace SpaceShooter
         {
             Score += num;
         }
-
-
-
         #endregion
     }
 }
